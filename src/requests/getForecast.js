@@ -11,9 +11,15 @@ const getForecast = async (
   try {
     if (!searchText) {
       response = await axios.get(`https://cmd-shift-weather-app.onrender.com/forecast?city=London`);
+      setSelectedDate(response.data.forecasts[0].date);
+      setForecasts(response.data.forecasts);
+      setLocation(response.data.location);
     } else {
-      setErrorMessage("");
       response = await axios.get(`https://cmd-shift-weather-app.onrender.com/forecast?city=${searchText}`);
+      setErrorMessage("");
+      setSelectedDate(response.data.forecasts[0].date);
+      setForecasts(response.data.forecasts);
+      setLocation(response.data.location);
     }
   } catch (error) {
     if (error.response.status === 404) {
@@ -27,9 +33,6 @@ const getForecast = async (
       console.error("Server Error", error);
     }
   }
-  setSelectedDate(response.data.forecasts[0].date);
-  setForecasts(response.data.forecasts);
-  setLocation(response.data.location);
 };
 
 export default getForecast;
