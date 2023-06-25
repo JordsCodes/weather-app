@@ -26,6 +26,7 @@ function App() {
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };
+
   return (
     <div className="weather-app">
       <LocationDetails city={city} country={country} errorMessage={errorMessage} />

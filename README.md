@@ -4,6 +4,8 @@ This is an app designed to retrieve and display a five day weather forecast from
 
 `https://cmd-shift-weather-app.onrender.com/`
 
+<img src="/public/images/screenshot.png" alt="screenshot of app"/>
+
 The dependencies for this project are React, Node.js and axios.
 
 ## Installation

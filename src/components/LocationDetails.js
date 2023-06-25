@@ -1,9 +1,7 @@
 import React from "react";
 import "../styles/LocationDetails.css";
 
-function LocationDetails(props) {
-  const { city, country, errorMessage } = props;
-
+function LocationDetails({ city, country, errorMessage }) {
   if (errorMessage) {
     return <h1 className="location-details">{errorMessage}</h1>;
   }

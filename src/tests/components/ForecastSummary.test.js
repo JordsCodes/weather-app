@@ -11,7 +11,7 @@ describe("ForecastSummary", () => {
       min: 12,
       max: 22,
     },
-    onSelect: () => {},
+    onSelect: jest.fn(),
   };
 
   it("renders correctly", () => {
@@ -24,8 +24,10 @@ describe("ForecastSummary", () => {
         onSelect={validProps.onSelect}
       />,
     );
+
     expect(asFragment()).toMatchSnapshot();
   });
+
   it("renders correct values for props", () => {
     const { getByText, getByTestId } = render(
       <ForecastSummary
@@ -35,6 +37,7 @@ describe("ForecastSummary", () => {
         temperature={validProps.temperature.max}
       />,
     );
+
     expect(getByTestId("forecast-summary")).toHaveClass("forecast-summary");
     expect(getByText("Mon Apr 30 2018")).toHaveClass("forecast-summary_date");
     expect(getByText("Stub description")).toHaveClass("forecast-summary_description");

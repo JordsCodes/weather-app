@@ -1,6 +1,6 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import SearchForm from "../components/SearchForm";
+import { render } from "@testing-library/react";
+import SearchForm from "../../components/SearchForm";
 
 describe("SearchForm", () => {
   it("renders correctly", () => {

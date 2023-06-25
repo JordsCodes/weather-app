@@ -24,7 +24,7 @@ describe("ForecastSummaries", () => {
         },
       },
     ],
-    onForecastSelect: () => {},
+    onForecastSelect: jest.fn(),
   };
 
   it("renders correctly", () => {
@@ -34,6 +34,7 @@ describe("ForecastSummaries", () => {
         onForecastSelect={validProps.onForecastSelect}
       />,
     );
+
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -43,6 +44,7 @@ describe("ForecastSummaries", () => {
       onForecastSelect={validProps.onForecastSelect}
     />);
     const icons = screen.getAllByRole("button");
+
     expect(icons).toHaveLength(2);
   });
 });

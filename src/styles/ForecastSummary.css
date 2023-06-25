@@ -6,15 +6,15 @@
 }
 
 .forecast-summary_temperature {
-  margin-top: 5%;
+  margin-top: 10px;
 }
 
 .forecast-summary_description {
-  margin-top: 5%;
+  margin-top: 10px;
 }
 
 .forecast-summary_button {
-  margin-top: 5%;
+  margin-top: 10px;
   font-size: 0.85em;
   font-style: italic;
   padding: 2.5%;

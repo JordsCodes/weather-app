@@ -18,6 +18,7 @@ describe("ForecastDetails", () => {
 
   it("renders correctly", () => {
     const { asFragment } = render(<ForecastDetails forecast={validProps} />);
+
     expect(asFragment()).toMatchSnapshot();
   });
 });

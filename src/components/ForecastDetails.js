@@ -1,9 +1,7 @@
 import React from "react";
 import "../styles/ForecastDetails.css";
 
-function ForecastDetails(props) {
-  const { forecast } = props;
-
+function ForecastDetails({ forecast }) {
   const formattedDate = new Date(forecast.date).toDateString();
 
   return (

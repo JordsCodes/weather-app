@@ -2,12 +2,11 @@ import React from "react";
 import ForecastSummary from "./ForecastSummary";
 import "../styles/ForecastSummaries.css";
 
-function ForecastSummaries(props) {
-  const { forecasts, onForecastSelect } = props;
+function ForecastSummaries({ forecasts, onForecastSelect }) {
   return (
     <div className="forecast-summaries">
       {
-      forecasts.map((forecast, i) => (
+      forecasts.map((forecast) => (
         <ForecastSummary
           key={forecast.date}
           date={forecast.date}
